@@ -1,0 +1,168 @@
+Crie uma landing page moderna e altamente conversiva para venda de serviços do branding “Team Ferreira” (consultoria de personal). Objetivo: converter visitantes em compradores de planos. A página deve ser ONE-PAGE com rolagem suave, CTAs claros e foco total em mobile-first.
+
+IMPORTANTE (fotos):
+- Vou anexar fotos reais (Vanderson). Use essas fotos como base visual do layout (hero + seção “Quem é” + prova social).
+- Não invente imagens externas aleatórias; se alguma imagem faltar, use placeholders locais em /assets/* para eu trocar depois.
+
+Stack:
+- Use React + Vite.
+- Pode usar Tailwind para acelerar um design premium e consistente.
+- Componentes organizados, nomes claros, e código limpo.
+- Performance boa, carregamento rápido.
+
+Identidade/estilo:
+- Fitness premium, moderno, clean e forte.
+- Tipografia marcante, bastante espaço em branco, cards bem desenhados, botões grandes e chamativos.
+- Paleta sugerida: base escura (preto/grafite) + branco + 1 cor de destaque (ex: verde/laranja) para CTA.
+- Animações leves ao scroll (fade/slide discretos).
+
+Conteúdo oficial (em PT-BR):
+Marca: Team Ferreira
+Nome: Vanderson Ferreira
+
+Autoridade / formação:
+- Bacharelado em Educação Física
+- Pós-Graduado em Nutrição e Fisiologia do Esporte
+- 10 anos de Atleta Internacional de Fisiculturismo
+- 15 anos trabalhando com musculação
+- Proprietário/fundador do Team Ferreira
+
+Conquistas (destacar com ícones de troféu):
+🏆 Overall Classic Physique
+🥇 Top 1 Classic Physique Open C – Rio Pro / NPC
+🥇 Top 1 Classic Physique – Mr. Z. Oeste
+🥇 Top 1 BodyBuilder
+
+Serviços:
+
+1) 🔥 Consultoria / Mentoria / Acompanhamento Personalizado (Consultoria Online FerreiraTeam)
+🏋️‍♂️ Estratégia de Treino
+1) Avaliação física contínua
+- Análise do shape em jejum, pela manhã
+- Envio de fotos e vídeos semanal ou mensal, conforme o plano
+2) Planilha de treino personalizada
+- Treino atualizado mensalmente (ou quando necessário)
+- Ajustes com base na evolução, desempenho e feedback
+3) Acompanhamento direto pelo WhatsApp
+- Dúvidas de execução dos exercícios
+- Progressão de carga
+- Estratégias de treino e adaptação de rotina
+4) Feedback semanal estruturado
+- Avaliação da experiência com o treino
+- Ajustes na divisão, volume e intensidade (quando necessário; para atletas o suporte é diário)
+- Alinhamento constante para manter evolução e motivação
+
+🥗 Estratégia de Alimentação
+1) Prescrição alimentar individualizada
+- Baseada na análise do shape, peso, rotina diária e exames (quando disponíveis)
+2) Plano alimentar adaptado à sua realidade
+- Considera preferências pessoais
+- Respeita alimentos que gosta e evita os que não se adaptam à sua rotina
+3) Acompanhamento alimentar pelo WhatsApp
+- Dúvidas sobre refeições
+- Dificuldade de adesão
+- Ajustes práticos no dia a dia
+4) Feedback semanal de adesão e bem-estar do aluno
+- Avaliação da consistência na dieta
+- Observação da resposta do sistema digestivo
+- Ajustes para melhorar conforto, desempenho e resultados
+
+2) 📝 Prescrição de Treino Online
+Indicado para quem já faz acompanhamento nutricional, mas busca um treino bem estruturado conforme análise do shape.
+1) Planilha de treino personalizada
+- Treino montado de acordo com objetivo, nível e disponibilidade
+- Atualização mensal conforme necessidade
+2) Suporte via WhatsApp
+- Dúvidas sobre execução dos exercícios
+- Orientação sobre progressão de carga e estratégia de treino
+3) Feedback semanal estruturado
+- Avaliação da experiência com o treino
+- Ajustes na divisão, volume e intensidade
+- Alinhamento constante para manter evolução e motivação
+
+PREÇOS (regra obrigatória):
+- Para planos maiores que 1 mês, o preço principal deve aparecer em parcelas (trimestral = 3x, semestral = 6x, anual = 12x).
+- Abaixo, mostrar opção “à vista” com “desconto”.
+- Exibir em reais (pt-BR) e com boa formatação.
+- Cada plano deve ter um card com: nome, destaque (se houver), preço parcelado grande, preço à vista menor, 3–5 bullets “Inclui”, e botão “Começar agora”.
+
+Planos e preços — Consultoria Online FerreiraTeam:
+- Plano Mensal — R$ 247,00 (mostrar “R$ 247/mês”)
+- Plano Trimestral — R$ 497,00
+  Mostrar: “3x de R$ 165,67” e abaixo “ou R$ 497 à vista com desconto”
+- Plano Semestral — R$ 1.097,00
+  Mostrar: “6x de R$ 182,83” e abaixo “ou R$ 1.097 à vista com desconto”
+  Marcar como: “Mais vendido / Melhor custo-benefício”
+- Plano Anual — R$ 2.047,00
+  Mostrar: “12x de R$ 170,58” e abaixo “ou R$ 2.047 à vista com desconto máximo”
+  Marcar como: “Premium”
+
+Planos e preços — Prescrição de Treino Online:
+- Plano Mensal — R$ 97,00 (mostrar “R$ 97/mês”)
+- Plano Trimestral — R$ 287,00
+  Mostrar: “3x de R$ 95,67” e abaixo “ou R$ 287 à vista”
+- Plano Semestral — R$ 567,00
+  Mostrar: “6x de R$ 94,50” e abaixo “ou R$ 567 à vista”
+- Plano Anual — R$ 1.147,00
+  Mostrar: “12x de R$ 95,58” e abaixo “ou R$ 1.147 à vista”
+
+Checkout (links placeholder):
+- Crie um objeto JS com os links de checkout para cada plano, inicialmente "#".
+Exemplo:
+const checkoutLinks = {
+  consultoria_mensal: "#",
+  consultoria_trimestral: "#",
+  consultoria_semestral: "#",
+  consultoria_anual: "#",
+  treino_mensal: "#",
+  treino_trimestral: "#",
+  treino_semestral: "#",
+  treino_anual: "#",
+  whatsapp: "#",
+  instagram: "#"
+}
+- Os botões “Começar agora” devem usar esses links.
+- Também ter CTA “Falar no WhatsApp” usando checkoutLinks.whatsapp.
+
+Seções obrigatórias (ordem):
+1) Header fixo com logo/texto “Team Ferreira” + menu (Planos, Serviços, Quem é, FAQ) + CTA WhatsApp.
+2) Hero com headline forte:
+   “Consultoria Online Personalizada para Evoluir Seu Shape com Estratégia, Acompanhamento e Resultado Real”
+   Subheadline: “Treino, alimentação e acompanhamento direto pelo WhatsApp com Vanderson Ferreira.”
+   Incluir mini destaque de conquistas (em linha): “🏆 Overall Classic Physique • 🥇 Top 1 (Rio Pro/NPC) …”
+   2 CTAs: “Ver planos” (scroll) e “Falar no WhatsApp”.
+   Fundo/Imagem: usar foto real anexada (melhor foto do Vanderson).
+3) Prova social:
+   - 3 depoimentos (placeholders editáveis)
+   - Grade “Resultados” com placeholders (antes/depois), e texto legal pequeno: “Resultados variam; não há garantia.”
+4) “Para quem é / Para quem não é” (duas colunas com bullets).
+5) Seção “Consultoria Online FerreiraTeam” (cards/accordion organizados por Treino e Alimentação + WhatsApp + Feedback).
+6) Seção “Prescrição de Treino Online” (mais enxuta).
+7) Seção “Planos e Preços” com 2 abas/tabs ou toggle:
+   - Aba 1: Consultoria Online
+   - Aba 2: Prescrição de Treino
+   Cards conforme regras de preço.
+8) Seção “Quem é Vanderson Ferreira”:
+   - Foto real (placeholder se faltar)
+   - Credenciais
+   - Conquistas com troféus
+   - Texto curto de missão/abordagem (tom profissional e motivador):
+     “Minha missão é aplicar, na vida real, a mesma metodologia usada no fisiculturismo de alto rendimento: estratégia, constância e acompanhamento. Cada aluno é tratado de forma individual, respeitando sua rotina, nível e objetivo.”
+9) FAQ (6 perguntas + respostas curtas):
+   Sugestões de perguntas:
+   - Como funciona o acompanhamento pelo WhatsApp?
+   - Com que frequência o treino é atualizado?
+   - Preciso treinar na academia?
+   - Como envio fotos/vídeos para avaliação?
+   - Em quanto tempo vejo resultados?
+   - Como funciona pagamento e renovação?
+10) Rodapé com links (WhatsApp/Instagram placeholders) + aviso:
+   “Resultados variam. Este serviço não substitui acompanhamento médico.”
+
+Extras de UX:
+- Botão flutuante do WhatsApp no mobile.
+- Scroll suave para âncoras.
+- Destaque visual para o plano “Mais vendido”.
+- Layout bem bonito e pronto para produção.
+
+Entregue o projeto funcionando no Replit, com instruções simples no README: como rodar e onde trocar links e imagens.
