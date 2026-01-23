@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Trophy, Award, Medal, Users, ArrowRight } from "lucide-react";
+import { Trophy, Award, Medal, Users, ArrowRight, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function About() {
@@ -13,14 +13,14 @@ export function About() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl rounded-full translate-x-1/2" />
 
       <div className="container px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           
           {/* Content Side (Left) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="flex flex-col h-full justify-center"
+            className="flex flex-col h-full"
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/20 rounded-full w-fit mb-6">
               <Users className="w-4 h-4 text-primary" />
@@ -40,73 +40,105 @@ export function About() {
               </p>
             </div>
 
-            {/* Achievements List */}
-            <div className="space-y-3 mb-8">
-              <div className="flex items-center gap-3">
-                <Trophy className="w-5 h-5 text-yellow-500 shrink-0" />
-                <span className="text-white font-medium">Overall Classic Physique</span>
+            {/* Achievements Grid - Highlighted */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-start gap-3 hover:bg-white/10 transition-colors group">
+                <div className="p-2 bg-yellow-500/10 rounded-lg group-hover:bg-yellow-500/20 transition-colors">
+                  <Trophy className="w-6 h-6 text-yellow-500" />
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm uppercase">Overall Classic Physique</div>
+                  <div className="text-xs text-gray-400">Campeão Absoluto</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Medal className="w-5 h-5 text-yellow-500 shrink-0" />
-                <span className="text-white font-medium">Top 1 Classic Physique OpenC | Rio Pro/NPC</span>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-start gap-3 hover:bg-white/10 transition-colors group">
+                <div className="p-2 bg-yellow-500/10 rounded-lg group-hover:bg-yellow-500/20 transition-colors">
+                  <Medal className="w-6 h-6 text-yellow-500" />
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm uppercase">Top 1 Classic Physique</div>
+                  <div className="text-xs text-gray-400">Rio Pro / NPC (Open C)</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Award className="w-5 h-5 text-yellow-500 shrink-0" />
-                <span className="text-white font-medium">Top 1 Classic Physique | Mr. Z. Oeste</span>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-start gap-3 hover:bg-white/10 transition-colors group">
+                <div className="p-2 bg-yellow-500/10 rounded-lg group-hover:bg-yellow-500/20 transition-colors">
+                  <Award className="w-6 h-6 text-yellow-500" />
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm uppercase">Top 1 Classic Physique</div>
+                  <div className="text-xs text-gray-400">Mr. Z. Oeste</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
-                <Award className="w-5 h-5 text-yellow-500 shrink-0" />
-                <span className="text-white font-medium">Top 1 BodyBuilder</span>
+
+              <div className="bg-white/5 border border-white/10 rounded-xl p-4 flex items-start gap-3 hover:bg-white/10 transition-colors group">
+                <div className="p-2 bg-yellow-500/10 rounded-lg group-hover:bg-yellow-500/20 transition-colors">
+                  <Star className="w-6 h-6 text-yellow-500" />
+                </div>
+                <div>
+                  <div className="font-bold text-white text-sm uppercase">Top 1 BodyBuilder</div>
+                  <div className="text-xs text-gray-400">Campeão</div>
+                </div>
               </div>
             </div>
 
             <Button 
               onClick={scrollToServices}
-              className="w-fit bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wider px-8"
+              size="lg"
+              className="w-fit bg-primary hover:bg-primary/90 text-white font-bold uppercase tracking-wider px-8 py-6 text-base shadow-lg shadow-primary/20"
             >
               Como Funciona
-              <ArrowRight className="ml-2 w-4 h-4" />
+              <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </motion.div>
 
-          {/* Images Side (Right) */}
+          {/* Images Side (Right) - Larger Images */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 items-start"
+            className="flex flex-col gap-8"
           >
-            {/* Main Profile Image - Vanderson */}
-            <div className="xl:col-span-2 relative group">
-              <div className="aspect-[4/5] md:aspect-[16/10] xl:aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent z-10" />
+            {/* Main Profile Image - Vanderson (Swapped src based on user feedback) */}
+            <div className="w-full relative group">
+              <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
+                {/* User reported photos were swapped, so I'm using ze-da-obra.jpg for Vanderson (assuming the file content was swapped) 
+                    OR I'm swapping the file references. 
+                    Let's assume the filenames were actually correct but I should swap them because the user sees them swapped. 
+                    Actually, to be safe, I'm using the file that SHOULD be Vanderson. 
+                    If the user says "Fundador... está com a foto do seu zé" (Fundador had vanderson-profile-new.jpg), 
+                    then vanderson-profile-new.jpg IS Seu Zé.
+                    So for Vanderson, I should use ze-da-obra.jpg. */}
                 <img 
-                  src="/assets/images/vanderson-profile-new.jpg" 
+                  src="/assets/images/ze-da-obra.jpg" 
                   alt="Vanderson Ferreira" 
                   className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute bottom-4 left-4 z-20">
-                  <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                <div className="absolute bottom-6 left-6 z-20">
+                  <span className="bg-primary text-white text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
                     Fundador Team Ferreira
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Social Proof Image - Father */}
-            <div className="xl:col-span-2 mt-4 xl:mt-0">
-              <div className="relative bg-card border border-white/10 rounded-2xl p-4 flex flex-col sm:flex-row gap-6 items-center hover:border-primary/30 transition-colors">
-                <div className="w-full sm:w-32 h-32 shrink-0 rounded-xl overflow-hidden border border-white/10 relative">
+            {/* Social Proof Image - Father (Swapped src) */}
+            <div className="w-full">
+              <div className="relative bg-card border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center hover:border-primary/30 transition-colors shadow-lg">
+                <div className="w-full md:w-48 aspect-square shrink-0 rounded-xl overflow-hidden border border-white/10 relative">
+                   {/* If vanderson-profile-new.jpg is actually Seu Zé, use it here */}
                   <img 
-                    src="/assets/images/ze-da-obra.jpg" 
+                    src="/assets/images/vanderson-profile-new.jpg" 
                     alt="Seu Zé da Obra" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div>
-                  <h4 className="font-heading font-bold text-white text-lg mb-1">Seu Zé da Obra</h4>
-                  <div className="inline-block bg-white/10 px-2 py-0.5 rounded text-xs text-gray-300 mb-2 font-medium">+60 anos</div>
-                  <p className="text-gray-400 text-sm italic">
+                <div className="text-center md:text-left">
+                  <h4 className="font-heading font-bold text-white text-xl mb-1">Seu Zé da Obra</h4>
+                  <div className="inline-block bg-white/10 px-3 py-1 rounded text-sm text-gray-300 mb-3 font-medium">+60 anos</div>
+                  <p className="text-gray-400 text-sm italic leading-relaxed">
                     "Prova real de que método e consistência funcionam. Resultado construído com estratégia adaptada para a idade."
                   </p>
                 </div>
