@@ -15,10 +15,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <SocialProof />
+      <About /> {/* Moved About section here, between SocialProof and Audience */}
       <Audience />
       <Services />
       <Pricing />
-      <About />
       <FAQ />
       <Footer />
       <FloatingWhatsApp />

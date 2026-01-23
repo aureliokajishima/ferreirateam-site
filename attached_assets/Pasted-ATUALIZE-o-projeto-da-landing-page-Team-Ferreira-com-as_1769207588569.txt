@@ -1,0 +1,49 @@
+ATUALIZE o projeto da landing page “Team Ferreira” com as mudanças abaixo (sem quebrar o layout atual). O foco é reposicionar e remodelar a seção de apresentação do Vanderson, usando DUAS fotos reais (Vanderson e o pai “Seu Zé da Obra”).
+
+IMPORTANTE (fotos):
+- Vou anexar novamente a foto do Vanderson e vou anexar uma nova foto do pai dele (Seu Zé da Obra).
+- Use a foto do Vanderson como imagem principal do bloco (perfil/autoridade).
+- Use a foto do pai como prova de método/resultado, com legenda curta.
+- Não use imagens externas aleatórias; se faltar algum arquivo, use placeholders locais em /assets/*.
+
+MUDANÇA DE ORDEM DAS SEÇÕES (obrigatório):
+- REMOVA a seção “Quem é Vanderson Ferreira” do local atual (onde estiver).
+- CRIE/INSIRA a seção de apresentação do Vanderson IMEDIATAMENTE:
+  (1) DEPOIS da seção “Galeria de Resultados” (antes/depois)
+  (2) ANTES da seção “Para quem é / Para quem não é”
+- Mantenha as demais seções e a navegação funcionando.
+
+NOVO CONTEÚDO DA SEÇÃO (usar exatamente este texto):
+Título da seção: “Quem é Vanderson Ferreira”
+Texto (parágrafo):
+Sou Vanderson Ferreira, bacharel em Educação Física, pós-graduado em Nutrição e Fisiologia do Esporte, atleta internacional de fisiculturismo e fundador do Team Ferreira. Tenho 15 anos de experiência na musculação e 10 anos no fisiculturismo competitivo, e já ajudei mais de 100 alunos a conquistarem resultados reais em emagrecimento, definição e ganho de massa muscular, aplicando a mesma metodologia que me levou à evolução no fisiculturismo de alto nível. Essa estratégia se adapta a diferentes perfis e idades — inclusive ao meu pai, o Seu Zé da Obra, que com mais de 60 anos mantém um físico atlético.
+
+Linha final (impactante, em destaque/bold):
+Meu objetivo é simples e direto: aplicar toda essa experiência para te conduzir com estratégia, acompanhamento e ajustes constantes até que você alcance o resultado que realmente deseja — seja emagrecer, ganhar massa, definir o corpo ou elevar sua saúde e qualidade de vida a um novo nível.
+
+Conquistas (mostrar em lista com ícones de troféu):
+🏆 Overall Classic Physique
+🥇 Top 1 Classic Physique OpenC | Rio Pro/NPC
+🥇 Top 1 Classic Physique | Mr. Z. Oeste
+🥇 Top 1 BodyBuilder
+
+LAYOUT / DESIGN DA SEÇÃO (obrigatório):
+- Faça a seção em formato “split” (duas colunas no desktop e uma coluna no mobile).
+- Coluna esquerda: texto + lista de conquistas + CTA (Como funciona).
+- Coluna direita: duas fotos em cards empilhados ou em grid 2x1:
+  - Card 1: Foto do Vanderson (maior, principal)
+  - Card 2: Foto do pai (menor, como prova)
+- Adicione legenda curta abaixo da foto do pai:
+  “Seu Zé da Obra — +60 anos. Prova real de que método e consistência funcionam.”
+- Incluir um mini “selo”/badge acima do texto: “+100 alunos ativos”.
+- Manter o mesmo estilo premium do site: tipografia forte, bom espaçamento, cards com bordas arredondadas e sombra suave.
+- Garantir excelente responsividade no celular.
+
+NAVEGAÇÃO:
+- Se existir item no menu “Quem é”, ele deve rolar para esta nova seção (anchor id="quem-e").
+- Se não existir, crie o anchor mesmo assim para futura navegação.
+
+
+ENTREGAR:
+- Código funcionando no Replit.
+- Atualize/garanta que o README (se existir) diga onde trocar as fotos e quais são os arquivos esperados (ex: /assets/vanderson.jpg e /assets/ze-da-obra.jpg).
