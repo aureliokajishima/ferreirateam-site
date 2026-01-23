@@ -1,0 +1,95 @@
+ATUALIZE a seção “Como funciona” (Metodologia) dentro da área de Serviços da landing page “Team Ferreira”, tornando a explicação mais clara, guiada por etapas e ajudando o visitante a entender qual serviço é o ideal para ele.
+
+OBJETIVO DA MUDANÇA:
+- Explicar de forma didática a diferença entre:
+  1) Consultoria Completa
+  2) Prescrição de Treino
+- Mostrar para QUE TIPO DE PESSOA cada opção é mais indicada.
+- Conduzir o usuário passo a passo até a ação final (“Começar agora”).
+
+ESTRUTURA OBRIGATÓRIA DA SEÇÃO “COMO FUNCIONA”:
+
+Título da seção:
+“Como funciona a metodologia Team Ferreira”
+
+Subtítulo curto:
+“Escolha o serviço ideal para você e evolua com estratégia, acompanhamento e resultado real.”
+
+────────────────────────
+ETAPA 1 — ENTENDA QUAL É O IDEAL PARA VOCÊ
+────────────────────────
+
+Criar dois cards comparativos (lado a lado no desktop, empilhados no mobile):
+
+CARD 1 — CONSULTORIA COMPLETA
+Título: “Consultoria Completa — acompanhamento total”
+Descrição:
+“Indicada para quem busca um acompanhamento completo de treino, alimentação e evolução física, com suporte próximo e ajustes constantes.”
+
+Para quem é ideal:
+- Pessoas que querem emagrecer, definir ou ganhar massa muscular
+- Quem precisa de orientação tanto no treino quanto na alimentação
+- Quem busca acompanhamento próximo e feedbacks frequentes
+- Pessoas que querem resultados consistentes e sustentáveis
+
+Benefícios:
+- Treino e alimentação totalmente personalizados
+- Ajustes frequentes conforme evolução
+- Acompanhamento direto pelo WhatsApp
+- Feedbacks constantes para manter progresso e motivação
+
+CARD 2 — PRESCRIÇÃO DE TREINO ONLINE
+Título: “Prescrição de Treino — foco em treino bem estruturado”
+Descrição:
+“Indicada para quem já possui acompanhamento nutricional ou boa noção alimentar, mas precisa de um treino eficiente e bem planejado.”
+
+Para quem é ideal:
+- Pessoas que já seguem dieta com nutricionista
+- Quem quer um treino estruturado e adaptado ao objetivo
+- Quem busca evolução no treino com suporte técnico
+- Quem não precisa de acompanhamento alimentar
+
+Benefícios:
+- Treino personalizado conforme objetivo e rotina
+- Atualizações periódicas do treino
+- Suporte para dúvidas de execução e progressão
+- Feedback para ajustes de volume, carga e intensidade
+
+────────────────────────
+ETAPA 2 — ESCOLHA O PLANO IDEAL
+────────────────────────
+
+Texto explicativo curto:
+“Após escolher o tipo de acompanhamento ideal para você, selecione o plano que melhor se encaixa na sua rotina e no seu objetivo.”
+
+Mostrar bullets:
+- Plano Mensal — ideal para quem quer testar a metodologia
+- Plano Trimestral — ideal para criar consistência
+- Plano Semestral — ideal para evoluções mais sólidas
+- Plano Anual — ideal para transformações completas
+
+Adicionar observação:
+“Quanto maior o período, maior o compromisso com a evolução e melhores os resultados.”
+
+────────────────────────
+ETAPA 3 — COMECE AGORA
+────────────────────────
+
+Texto curto e direto:
+“Clique em ‘Começar agora’ para iniciar seu atendimento. Você será direcionado para o contato, onde poderá tirar dúvidas e finalizar sua adesão com segurança.”
+
+Botão:
+- CTA primário: “Começar agora”
+- O botão deve usar o link já existente de checkout ou WhatsApp (placeholder atual).
+
+REQUISITOS DE DESIGN:
+- Layout limpo, didático e visualmente organizado
+- Cards bem destacados
+- Ícones simples para diferenciar serviços, benefícios e etapas
+- Excelente leitura no mobile
+- Manter identidade premium do site
+
+ENTREGAR:
+- Seção “Como funciona” clara, explicativa e persuasiva
+- Sem remover informações importantes já existentes
+- Código funcionando no Replit
