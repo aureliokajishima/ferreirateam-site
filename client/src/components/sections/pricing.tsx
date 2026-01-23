@@ -10,9 +10,8 @@ import { CHECKOUT_LINKS } from "@/lib/constants";
 type Plan = {
   duration: string;
   priceMonthly: string;
-  totalPrice?: string;
-  installments?: string;
-  installmentValue?: string;
+  basePrice: number; // For Pix calculation
+  installmentsText?: string;
   bestValue?: boolean;
   premium?: boolean;
   link: string;
@@ -23,20 +22,23 @@ const CONSULTORIA_PLANS: Plan[] = [
   {
     duration: "Mensal",
     priceMonthly: "R$ 247/mês",
+    basePrice: 247,
     link: CHECKOUT_LINKS.consultoria_mensal,
     features: ["Treino Personalizado", "Dieta Completa", "Suporte WhatsApp", "Feedback Semanal"]
   },
   {
     duration: "Trimestral",
     priceMonthly: "3x R$ 165,67",
-    totalPrice: "R$ 497 à vista",
+    basePrice: 497,
+    installmentsText: "ou R$ 497 à vista",
     link: CHECKOUT_LINKS.consultoria_trimestral,
     features: ["Economize R$ 244", "Treino + Dieta", "Suporte Prioritário", "Ajustes Quinzenais"]
   },
   {
     duration: "Semestral",
     priceMonthly: "6x R$ 182,83",
-    totalPrice: "R$ 1.097 à vista",
+    basePrice: 1097,
+    installmentsText: "ou R$ 1.097 à vista",
     bestValue: true,
     link: CHECKOUT_LINKS.consultoria_semestral,
     features: ["Melhor Custo-Benefício", "Planejamento de Longo Prazo", "Avaliação de Exames", "Suporte Premium"]
@@ -44,7 +46,8 @@ const CONSULTORIA_PLANS: Plan[] = [
   {
     duration: "Anual",
     priceMonthly: "12x R$ 170,58",
-    totalPrice: "R$ 2.047 à vista",
+    basePrice: 2047,
+    installmentsText: "ou R$ 2.047 à vista",
     premium: true,
     link: CHECKOUT_LINKS.consultoria_anual,
     features: ["Transformação Total", "Mentoria VIP", "Acesso Direto ao Coach", "Planejamento Competitivo"]
@@ -55,20 +58,23 @@ const TREINO_PLANS: Plan[] = [
   {
     duration: "Mensal",
     priceMonthly: "R$ 97/mês",
+    basePrice: 97,
     link: CHECKOUT_LINKS.treino_mensal,
     features: ["Planilha de Treino", "Suporte WhatsApp", "Vídeos Explicativos"]
   },
   {
     duration: "Trimestral",
     priceMonthly: "3x R$ 95,67",
-    totalPrice: "R$ 287 à vista",
+    basePrice: 287,
+    installmentsText: "ou R$ 287 à vista",
     link: CHECKOUT_LINKS.treino_trimestral,
     features: ["Economia Garantida", "Periodização de 3 Meses", "Suporte Contínuo"]
   },
   {
     duration: "Semestral",
     priceMonthly: "6x R$ 94,50",
-    totalPrice: "R$ 567 à vista",
+    basePrice: 567,
+    installmentsText: "ou R$ 567 à vista",
     bestValue: true,
     link: CHECKOUT_LINKS.treino_semestral,
     features: ["Foco na Evolução", "Ajustes de Carga", "Análise de Técnica"]
@@ -76,7 +82,8 @@ const TREINO_PLANS: Plan[] = [
   {
     duration: "Anual",
     priceMonthly: "12x R$ 95,58",
-    totalPrice: "R$ 1.147 à vista",
+    basePrice: 1147,
+    installmentsText: "ou R$ 1.147 à vista",
     link: CHECKOUT_LINKS.treino_anual,
     features: ["Ano Inteiro de Treino", "Periodização Completa", "Resultados Sólidos"]
   }
@@ -86,6 +93,11 @@ export function Pricing() {
   const [isConsultoria, setIsConsultoria] = useState(true);
 
   const plans = isConsultoria ? CONSULTORIA_PLANS : TREINO_PLANS;
+
+  const calculatePixPrice = (basePrice: number) => {
+    const discounted = basePrice * 0.95; // 5% off
+    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(discounted);
+  };
 
   return (
     <section id="planos" className="py-24 bg-black/50 relative">
@@ -149,9 +161,14 @@ export function Pricing() {
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                   {plan.priceMonthly}
                 </div>
-                {plan.totalPrice && (
-                  <p className="text-sm text-gray-400">ou {plan.totalPrice}</p>
+                {plan.installmentsText && (
+                  <p className="text-sm text-gray-400">{plan.installmentsText}</p>
                 )}
+                {/* Pix Discount Line */}
+                <div className="mt-2 text-sm font-semibold text-green-400 flex items-center gap-1.5">
+                  <Zap className="w-3 h-3 fill-current" />
+                  ou {calculatePixPrice(plan.basePrice)} no Pix à vista (5% OFF)
+                </div>
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">

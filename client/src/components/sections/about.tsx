@@ -100,17 +100,10 @@ export function About() {
             viewport={{ once: true }}
             className="flex flex-col gap-8"
           >
-            {/* Main Profile Image - Vanderson (Swapped src based on user feedback) */}
+            {/* Main Profile Image - Vanderson */}
             <div className="w-full relative group">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent z-10" />
-                {/* User reported photos were swapped, so I'm using ze-da-obra.jpg for Vanderson (assuming the file content was swapped) 
-                    OR I'm swapping the file references. 
-                    Let's assume the filenames were actually correct but I should swap them because the user sees them swapped. 
-                    Actually, to be safe, I'm using the file that SHOULD be Vanderson. 
-                    If the user says "Fundador... está com a foto do seu zé" (Fundador had vanderson-profile-new.jpg), 
-                    then vanderson-profile-new.jpg IS Seu Zé.
-                    So for Vanderson, I should use ze-da-obra.jpg. */}
                 <img 
                   src="/assets/images/ze-da-obra.jpg" 
                   alt="Vanderson Ferreira" 
@@ -124,11 +117,10 @@ export function About() {
               </div>
             </div>
 
-            {/* Social Proof Image - Father (Swapped src) */}
+            {/* Social Proof Image - Father */}
             <div className="w-full">
               <div className="relative bg-card border border-white/10 rounded-2xl p-6 flex flex-col md:flex-row gap-6 items-center hover:border-primary/30 transition-colors shadow-lg">
                 <div className="w-full md:w-48 aspect-square shrink-0 rounded-xl overflow-hidden border border-white/10 relative">
-                   {/* If vanderson-profile-new.jpg is actually Seu Zé, use it here */}
                   <img 
                     src="/assets/images/vanderson-profile-new.jpg" 
                     alt="Seu Zé da Obra" 
@@ -136,7 +128,9 @@ export function About() {
                   />
                 </div>
                 <div className="text-center md:text-left">
-                  <h4 className="font-heading font-bold text-white text-xl mb-1">Seu Zé da Obra</h4>
+                  <h4 className="font-heading font-bold text-white text-xl mb-1">
+                    SEU ZÉ DA OBRA <span className="text-gray-400 font-normal text-base opacity-70">(meu pai)</span>
+                  </h4>
                   <div className="inline-block bg-white/10 px-3 py-1 rounded text-sm text-gray-300 mb-3 font-medium">+60 anos</div>
                   <p className="text-gray-400 text-sm italic leading-relaxed">
                     "Prova real de que método e consistência funcionam. Resultado construído com estratégia adaptada para a idade."

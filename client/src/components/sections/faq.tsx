@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "Como envio fotos e vídeos para avaliação?",
-    a: "Tudo pelo WhatsApp. Solicito fotos em jejum e vídeos dos exercícios principais. Isso é fundamental para eu ajustar sua dieta e corrigir sua postura."
+    a: "Pela área do aluno OU pelo WhatsApp."
   },
   {
     q: "Em quanto tempo vejo resultados?",

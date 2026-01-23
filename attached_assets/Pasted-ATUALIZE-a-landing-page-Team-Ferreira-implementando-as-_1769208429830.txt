@@ -1,0 +1,76 @@
+ATUALIZE a landing page “Team Ferreira” implementando as mudanças abaixo, mantendo o visual premium e sem quebrar as seções existentes.
+
+1) ADICIONAR “COMUNIDADE NO TELEGRAM”
+- Adicione uma pequena seção/bloco (card) em algum ponto de alta conversão:
+  Preferência: logo após a seção “Planos e Preços” (ou no rodapé também).
+- Título: “Comunidade no Telegram”
+- Nome da comunidade: “Team Ferreira🏆”
+- Descrição curta: “Dicas, opiniões e estudos toda semana — conteúdo direto ao ponto para te manter no caminho.”
+- Botão/CTA: “Entrar no Telegram”
+- Use link placeholder no objeto checkoutLinks:
+  checkoutLinks.telegram = "#"
+- O botão deve usar checkoutLinks.telegram.
+
+2) CONTATOS + PARCERIAS
+- No rodapé (Footer), crie uma área “Contatos” com:
+  - Email: exemplo@gmail.com (clicável mailto)
+  - Instagram: @vandersonn_ferreira (clicável; use placeholder real do perfil)
+  - Telefone/WhatsApp: +55 (21) 97659-2839 (clicável tel: e também pode abrir WhatsApp)
+- Crie também uma área “Parcerias Ativas” no rodapé (ou seção pequena acima do footer) com badges/logos (placeholders):
+  - Growth
+  - TopPharma Team
+
+3) PREÇOS: DESCONTO DE 5% NO PIX À VISTA (obrigatório)
+- Em TODOS os cards de planos, além do preço parcelado, mostrar a opção:
+  “ou R$ X,XX no Pix à vista (5% OFF)”
+- Calcular X,XX como 5% de desconto sobre o valor cheio e formatar em reais (pt-BR).
+- Exibir o valor Pix com destaque menor que o parcelado, mas claramente visível.
+- Não alterar os valores “cheios” já existentes; apenas adicionar a linha do Pix com 5% OFF.
+
+Valores base (cheios) que já existem:
+Consultoria Online FerreiraTeam:
+- Mensal: 247,00
+- Trimestral: 497,00
+- Semestral: 1.097,00
+- Anual: 2.047,00
+
+Prescrição de Treino Online:
+- Mensal: 97,00
+- Trimestral: 287,00
+- Semestral: 567,00
+- Anual: 1.147,00
+
+Regras de exibição mantidas:
+- Mensal: “R$ X/mês”
+- Trimestral: 3x ...
+- Semestral: 6x ...
+- Anual: 12x ...
+- Acrescentar abaixo: “Pix à vista (5% OFF)”
+
+4) FAQ: AJUSTE DE PERGUNTA/RESPOSTA
+- No FAQ, atualizar a pergunta:
+  “Como envio fotos e vídeos para avaliação?”
+- Resposta obrigatória: “Pela área do aluno OU pelo WhatsApp.”
+- Deixar a resposta curta e objetiva.
+
+5) AJUSTE VISUAL DO TEXTO “SEU ZÉ DA OBRA (meu pai)”
+- Na seção “Quem é Vanderson Ferreira”, onde aparece “Seu Zé da Obra”, alterar para:
+  “SEU ZÉ DA OBRA (meu pai)”
+- Estilo obrigatório:
+  - “SEU ZÉ DA OBRA” mais destacado (mesma cor do texto principal e peso maior)
+  - “(meu pai)” em cinza, menos destacado (menor opacidade e/ou peso menor)
+  - Manter visual elegante e legível no mobile.
+
+6) LINKS PLACEHOLDERS
+- Atualizar/garantir que o objeto checkoutLinks inclua:
+  telegram: "#"
+  instagram: "https://instagram.com/vandersonn_ferreira" (pode ser real)
+  email: "mailto:exemplo@gmail.com"
+  telefone: "tel:+5521976592839"
+  whatsapp: manter como já está (ou usar wa.me com placeholder)
+- Todos os botões/links devem puxar desses campos.
+
+ENTREGAR:
+- Site funcionando no Replit.
+- Manter responsividade e visual premium.
+- Garantir que os valores Pix com 5% OFF apareçam em todos os cards dos planos.
