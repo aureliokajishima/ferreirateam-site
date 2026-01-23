@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     q: "Como envio fotos e vídeos para avaliação?",
-    a: "Pela área do aluno OU pelo WhatsApp."
+    a: "Pela área do aluno ou pelo whatsapp (depende do plano escolhido)."
   },
   {
     q: "Em quanto tempo vejo resultados?",
