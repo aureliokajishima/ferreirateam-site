@@ -4,7 +4,7 @@ import { CheckCircle2, XCircle } from "lucide-react";
 export function Audience() {
   return (
     <section className="py-24 bg-background border-y border-white/5">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Who is it for */}
           <motion.div

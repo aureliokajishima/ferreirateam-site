@@ -4,7 +4,7 @@ import { CHECKOUT_LINKS } from "@/lib/constants";
 export function Footer() {
   return (
     <footer className="bg-black py-16 border-t border-white/10">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         
         {/* Top Section: Partners & Brand */}
         <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">

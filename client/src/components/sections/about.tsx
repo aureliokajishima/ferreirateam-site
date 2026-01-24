@@ -12,7 +12,7 @@ export function About() {
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 blur-3xl rounded-full translate-x-1/2" />
 
-      <div className="container px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           
           {/* Content Side (Left) */}

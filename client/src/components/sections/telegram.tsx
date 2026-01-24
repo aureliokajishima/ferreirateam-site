@@ -6,7 +6,7 @@ import { CHECKOUT_LINKS } from "@/lib/constants";
 export function Telegram() {
   return (
     <section className="bg-gradient-to-r from-[#229ED9]/20 to-transparent border-y border-[#229ED9]/20 py-16">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

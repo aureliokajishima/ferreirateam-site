@@ -24,7 +24,7 @@ const TESTIMONIALS = [
 export function SocialProof() {
   return (
     <section className="py-24 bg-background">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-heading font-bold text-white mb-4">
             QUEM SEGUE O PLANO <span className="text-primary">EVOLUI</span>
