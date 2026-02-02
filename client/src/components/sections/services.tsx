@@ -16,7 +16,7 @@ export function Services() {
         <div className="text-center mb-16">
           <span className="text-primary font-bold tracking-widest uppercase text-sm">Metodologia</span>
           <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mt-2 mb-4">
-            COMO FUNCIONA A METODOLOGIA TEAM FERREIRA
+            COMO FUNCIONA A METODOLOGIA FERREIRA TEAM
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Escolha o serviço ideal para você e evolua com estratégia, acompanhamento e resultado real.
