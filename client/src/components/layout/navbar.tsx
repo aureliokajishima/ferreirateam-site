@@ -43,7 +43,7 @@ export function Navbar() {
       <div className="container mx-auto px-4 flex items-center justify-between relative z-50">
         <div className="flex items-center gap-2">
           <span className="font-heading font-bold text-2xl tracking-tighter text-white">
-            TEAM <span className="text-primary">FERREIRA</span>
+            FERREIRA <span className="text-primary">TEAM</span>
           </span>
         </div>
 

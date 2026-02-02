@@ -23,7 +23,7 @@ export function Telegram() {
               </h3>
             </div>
             
-            <h4 className="text-xl font-bold text-[#229ED9] mb-2">Team Ferreira🏆</h4>
+            <h4 className="text-xl font-bold text-[#229ED9] mb-2">Ferreira Team🏆</h4>
             <p className="text-gray-300 max-w-lg mx-auto md:mx-0">
               Dicas, opiniões e estudos toda semana — conteúdo direto ao ponto para te manter no caminho.
             </p>

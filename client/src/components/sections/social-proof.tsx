@@ -12,7 +12,7 @@ const TESTIMONIALS = [
   {
     name: "Mariana Souza",
     result: "Ganho de massa e definição",
-    text: "Já tentei várias consultorias, mas o Team Ferreira foi onde me encontrei. A dieta não é restritiva demais, consigo seguir, e o treino é intenso de verdade. Os resultados vieram rápido.",
+    text: "Já tentei várias consultorias, mas o Ferreira Team foi onde me encontrei. A dieta não é restritiva demais, consigo seguir, e o treino é intenso de verdade. Os resultados vieram rápido.",
   },
   {
     name: "Pedro Alves",

@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid md:grid-cols-2 gap-12 mb-12 items-start">
           <div>
             <span className="font-heading font-bold text-3xl tracking-tighter text-white block mb-4">
-              TEAM <span className="text-primary">FERREIRA</span>
+              FERREIRA <span className="text-primary">TEAM</span>
             </span>
             <p className="text-gray-500 text-sm max-w-sm leading-relaxed mb-6">
               Consultoria esportiva de alto rendimento para pessoas reais. Estratégia, ciência e resultado prático.
@@ -73,7 +73,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-600">
-          <p>© {new Date().getFullYear()} Team Ferreira. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Ferreira Team. Todos os direitos reservados.</p>
           <div className="text-center md:text-right">
             <p>Resultados variam. Este serviço não substitui acompanhamento médico.</p>
           </div>

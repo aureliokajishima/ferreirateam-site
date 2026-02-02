@@ -33,7 +33,7 @@ export function About() {
             
             <div className="space-y-6 text-gray-300 text-lg leading-relaxed mb-8">
               <p>
-                Sou Vanderson Ferreira, bacharel em Educação Física, pós-graduado em Nutrição e Fisiologia do Esporte, atleta internacional de fisiculturismo e fundador do Team Ferreira. Tenho 15 anos de experiência na musculação e 10 anos no fisiculturismo competitivo, e já ajudei mais de 100 alunos a conquistarem resultados reais em emagrecimento, definição e ganho de massa muscular, aplicando a mesma metodologia que me levou à evolução no fisiculturismo de alto nível.
+                Sou Vanderson Ferreira, bacharel em Educação Física, pós-graduado em Nutrição e Fisiologia do Esporte, atleta internacional de fisiculturismo e fundador do Ferreira Team. Tenho 15 anos de experiência na musculação e 10 anos no fisiculturismo competitivo, e já ajudei mais de 100 alunos a conquistarem resultados reais em emagrecimento, definição e ganho de massa muscular, aplicando a mesma metodologia que me levou à evolução no fisiculturismo de alto nível.
               </p>
               <p className="font-bold text-white border-l-4 border-primary pl-4">
                 Meu objetivo é simples e direto: aplicar toda essa experiência para te conduzir com estratégia, acompanhamento e ajustes constantes até que você alcance o resultado que realmente deseja — seja emagrecer, ganhar massa, definir o corpo ou elevar sua saúde e qualidade de vida a um novo nível.
@@ -111,7 +111,7 @@ export function About() {
                 />
                 <div className="absolute bottom-6 left-6 z-20">
                   <span className="bg-primary text-white text-sm font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-lg">
-                    Fundador Team Ferreira
+                    Fundador Ferreira Team
                   </span>
                 </div>
               </div>
