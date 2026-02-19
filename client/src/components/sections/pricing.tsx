@@ -10,7 +10,8 @@ import { CHECKOUT_LINKS } from "@/lib/constants";
 type Plan = {
   duration: string;
   priceMonthly: string;
-  basePrice: number; // For Pix calculation
+  basePrice?: number; // For Pix calculation (used in Treino plans)
+  pixText?: string; // Custom Pix text for Consultoria plans
   installmentsText?: string;
   bestValue?: boolean;
   premium?: boolean;
@@ -21,33 +22,33 @@ type Plan = {
 const CONSULTORIA_PLANS: Plan[] = [
   {
     duration: "Mensal",
-    priceMonthly: "R$ 247/mês",
-    basePrice: 247,
+    priceMonthly: "R$ 272,51/mês",
+    pixText: "ou R$ 260,00 no Pix à vista (Economiza R$ 12,51)",
     link: CHECKOUT_LINKS.consultoria_mensal,
     features: ["Treino Personalizado", "Dieta Completa", "Suporte WhatsApp", "Feedback Semanal"]
   },
   {
     duration: "Trimestral",
-    priceMonthly: "3x R$ 165,67",
-    basePrice: 497,
-    installmentsText: "ou R$ 497 à vista",
+    priceMonthly: "R$ 219,97/mês",
+    installmentsText: "3x R$ 219,97",
+    pixText: "ou R$ 625,00 no Pix à vista (Economiza R$ 34,91)",
     link: CHECKOUT_LINKS.consultoria_trimestral,
     features: ["Economize R$ 244", "Treino + Dieta", "Suporte Prioritário", "Ajustes Quinzenais"]
   },
   {
     duration: "Semestral",
-    priceMonthly: "6x R$ 182,83",
-    basePrice: 1097,
-    installmentsText: "ou R$ 1.097 à vista",
+    priceMonthly: "R$ 175,98/mês",
+    installmentsText: "6x R$ 175,98",
+    pixText: "ou R$ 1.000,00 no Pix à vista (Economiza R$ 55,85)",
     bestValue: true,
     link: CHECKOUT_LINKS.consultoria_semestral,
     features: ["Melhor Custo-Benefício", "Planejamento de Longo Prazo", "Avaliação de Exames", "Suporte Premium"]
   },
   {
     duration: "Anual",
-    priceMonthly: "12x R$ 170,58",
-    basePrice: 2047,
-    installmentsText: "ou R$ 2.047 à vista",
+    priceMonthly: "R$ 167,55/mês",
+    installmentsText: "12x R$ 167,55",
+    pixText: "ou R$ 1.900,00 no Pix à vista (Economiza R$ 110,58)",
     premium: true,
     link: CHECKOUT_LINKS.consultoria_anual,
     features: ["Transformação Total", "Mentoria VIP", "Acesso Direto ao Coach", "Planejamento Competitivo"]
@@ -96,7 +97,7 @@ export function Pricing() {
 
   const calculatePixPrice = (basePrice: number) => {
     const discounted = basePrice * 0.95; // 5% off
-    return new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(discounted);
+    return `ou ${new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(discounted)} no Pix à vista (5% OFF)`;
   };
 
   return (
@@ -167,7 +168,7 @@ export function Pricing() {
                 {/* Pix Discount Line */}
                 <div className="mt-2 text-sm font-semibold text-green-400 flex items-center gap-1.5">
                   <Zap className="w-3 h-3 fill-current" />
-                  ou {calculatePixPrice(plan.basePrice)} no Pix à vista (5% OFF)
+                  {plan.pixText || (plan.basePrice ? calculatePixPrice(plan.basePrice) : "")}
                 </div>
               </div>
 
