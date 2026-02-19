@@ -58,33 +58,33 @@ const CONSULTORIA_PLANS: Plan[] = [
 const TREINO_PLANS: Plan[] = [
   {
     duration: "Mensal",
-    priceMonthly: "R$ 97/mês",
-    basePrice: 97,
+    priceMonthly: "R$ 154,07/mês",
+    pixText: "ou R$ 147,00 no Pix à vista (Economiza R$ 7,07)",
     link: CHECKOUT_LINKS.treino_mensal,
     features: ["Planilha de Treino", "Suporte WhatsApp", "Vídeos Explicativos"]
   },
   {
     duration: "Trimestral",
-    priceMonthly: "3x R$ 95,67",
-    basePrice: 287,
-    installmentsText: "ou R$ 287 à vista",
+    priceMonthly: "R$ 101,01/mês",
+    installmentsText: "3x R$ 101,01",
+    pixText: "ou R$ 287,00 no Pix à vista (Economiza R$ 16,03)",
     link: CHECKOUT_LINKS.treino_trimestral,
     features: ["Economia Garantida", "Periodização de 3 Meses", "Suporte Contínuo"]
   },
   {
     duration: "Semestral",
-    priceMonthly: "6x R$ 94,50",
-    basePrice: 567,
-    installmentsText: "ou R$ 567 à vista",
+    priceMonthly: "R$ 99,77/mês",
+    installmentsText: "6x R$ 99,77",
+    pixText: "ou R$ 567,00 no Pix à vista (Economiza R$ 31,67)",
     bestValue: true,
     link: CHECKOUT_LINKS.treino_semestral,
     features: ["Foco na Evolução", "Ajustes de Carga", "Análise de Técnica"]
   },
   {
     duration: "Anual",
-    priceMonthly: "12x R$ 95,58",
-    basePrice: 1147,
-    installmentsText: "ou R$ 1.147 à vista",
+    priceMonthly: "R$ 101,14/mês",
+    installmentsText: "12x R$ 101,14",
+    pixText: "ou R$ 1.147,00 no Pix à vista (Economiza R$ 66,76)",
     link: CHECKOUT_LINKS.treino_anual,
     features: ["Ano Inteiro de Treino", "Periodização Completa", "Resultados Sólidos"]
   }
