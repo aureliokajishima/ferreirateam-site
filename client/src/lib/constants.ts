@@ -10,7 +10,7 @@ export const CHECKOUT_LINKS = {
   whatsapp: "https://api.whatsapp.com/send?phone=5521966950789&text=Oi!%20Eu%20vim%20pelo%20site",
   telegram: "#",
   instagram: "https://instagram.com/vandersonn_ferreira",
-  email: "mailto:exemplo@gmail.com",
+  email: "mailto:ferreirateam87@gmail.com",
   telefone: "tel:+5521976592839"
 };
 

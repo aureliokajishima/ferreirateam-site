@@ -59,7 +59,7 @@ export function Footer() {
         <div className="grid md:grid-cols-3 gap-6 py-8 border-y border-white/5 mb-8">
           <a href={CHECKOUT_LINKS.email} className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
             <Mail className="w-5 h-5 text-primary/50 group-hover:text-primary" />
-            <span className="text-sm">exemplo@gmail.com</span>
+            <span className="text-sm">ferreirateam87@gmail.com</span>
           </a>
           <a href={CHECKOUT_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-gray-400 hover:text-white transition-colors group">
             <Instagram className="w-5 h-5 text-primary/50 group-hover:text-primary" />
