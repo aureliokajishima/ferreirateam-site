@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/hero";
 import { Audience } from "@/components/sections/audience";
 import { Services } from "@/components/sections/services";
 import { Pricing } from "@/components/sections/pricing";
-import { Telegram } from "@/components/sections/telegram";
 import { SocialProof } from "@/components/sections/social-proof";
 import { About } from "@/components/sections/about";
 import { FAQ } from "@/components/sections/faq";
@@ -20,7 +19,6 @@ export default function Home() {
       <Audience />
       <Services />
       <Pricing />
-      <Telegram />
       <FAQ />
       <Footer />
       <FloatingWhatsApp />
