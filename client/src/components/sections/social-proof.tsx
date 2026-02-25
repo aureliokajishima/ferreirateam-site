@@ -57,12 +57,30 @@ export function SocialProof() {
         <div className="rounded-2xl bg-white/5 border border-white/10 p-8 text-center">
           <h3 className="text-2xl font-heading font-bold text-white mb-8">GALERIA DE RESULTADOS</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[1, 2, 3, 4].map((item) => (
-              <div key={item} className="aspect-[4/5] bg-black/50 rounded-lg flex items-center justify-center border border-white/5 group relative overflow-hidden">
-                <span className="text-gray-500 z-10">Antes / Depois</span>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="aspect-[4/5] bg-black/50 rounded-lg flex items-center justify-center border border-white/5 group relative overflow-hidden">
+              <img src="/assets/aluno1antesxdepoisfront_1771987259559.jpeg" alt="Aluno 1 Frente" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                <span className="text-white font-bold text-sm">Antes / Depois</span>
               </div>
-            ))}
+            </div>
+            <div className="aspect-[4/5] bg-black/50 rounded-lg flex items-center justify-center border border-white/5 group relative overflow-hidden">
+              <img src="/assets/aluno1antesxdepoisback_1771987259557.jpeg" alt="Aluno 1 Costas" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                <span className="text-white font-bold text-sm">Antes / Depois</span>
+              </div>
+            </div>
+            <div className="aspect-[4/5] bg-black/50 rounded-lg flex items-center justify-center border border-white/5 group relative overflow-hidden">
+              <img src="/assets/aluno2antesxdepoisfront_1771987259553.jpeg" alt="Aluno 2 Frente" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                <span className="text-white font-bold text-sm">Antes / Depois</span>
+              </div>
+            </div>
+            <div className="aspect-[4/5] bg-black/50 rounded-lg flex items-center justify-center border border-white/5 group relative overflow-hidden">
+              <img src="/assets/aluno3back_1771987259561.jpeg" alt="Aluno 3 Costas" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-center pb-4">
+                <span className="text-white font-bold text-sm">Antes / Depois</span>
+              </div>
+            </div>
           </div>
           <p className="text-xs text-gray-500 mt-6">* Resultados variam de pessoa para pessoa e dependem da dedicação individual.</p>
         </div>
