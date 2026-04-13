@@ -152,11 +152,11 @@ export function Pricing() {
             ESCOLHA SEU PLANO
           </h2>
           
-          <div className="flex items-center justify-center gap-1 bg-white/5 p-2 rounded-full w-full max-w-md sm:w-fit mx-auto border border-white/10">
+          <div className="flex flex-wrap items-center justify-center gap-2 bg-white/5 p-2 rounded-3xl w-full sm:w-fit mx-auto border border-white/10">
             <button
               onClick={() => setActiveService('treino')}
               className={cn(
-                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all text-center",
+                "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold uppercase transition-all text-center whitespace-nowrap",
                 activeService === 'treino' ? "bg-white text-black" : "text-gray-400 hover:text-white"
               )}
             >
@@ -165,23 +165,23 @@ export function Pricing() {
             <button
               onClick={() => setActiveService('consultoria')}
               className={cn(
-                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1 sm:gap-2",
+                "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1.5 whitespace-nowrap",
                 activeService === 'consultoria' ? "bg-primary text-white shadow-lg shadow-primary/25" : "text-gray-400 hover:text-white"
               )}
             >
               Consultoria
-              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] hidden sm:inline">VIP</span>
+              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[10px] inline-block">VIP</span>
             </button>
             <button
               onClick={() => setActiveService('personal')}
               className={cn(
-                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1 sm:gap-2",
+                "px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1.5 whitespace-nowrap",
                 activeService === 'personal' ? "bg-primary text-white shadow-lg shadow-primary/25" : "text-gray-400 hover:text-white"
               )}
             >
-              <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              <Users className="w-3.5 h-3.5" />
               Personal
-              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] hidden sm:inline">Presencial</span>
+              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[10px] inline-block">Presencial</span>
             </button>
           </div>
         </div>
