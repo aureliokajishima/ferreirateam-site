@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Dumbbell, Utensils, MessageSquare, LineChart, CheckCircle2, ArrowRight, Target, Clock, Calendar } from "lucide-react";
+import { Dumbbell, Utensils, MessageSquare, LineChart, CheckCircle2, ArrowRight, Target, Clock, Calendar, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CHECKOUT_LINKS } from "@/lib/constants";
 
@@ -30,7 +30,7 @@ export function Services() {
             <h3 className="text-2xl font-heading font-bold text-white">ENTENDA QUAL É O IDEAL PARA VOCÊ</h3>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 gap-8">
             {/* CARD 1 - CONSULTORIA COMPLETA */}
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -165,6 +165,77 @@ export function Services() {
                 </div>
               </div>
             </motion.div>
+
+            {/* CARD 3 - PERSONAL TRAINER */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="bg-card border border-primary/30 rounded-2xl p-8 hover:border-primary/70 transition-colors relative group"
+            >
+              <div className="absolute -top-3 right-6 z-10">
+                <span className="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Presencial</span>
+              </div>
+              <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity overflow-hidden rounded-2xl">
+                <Users className="w-24 h-24 text-primary" />
+              </div>
+
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-4 mt-2">
+                  <div className="p-2 bg-primary/20 rounded-lg text-primary">
+                    <Users className="w-6 h-6" />
+                  </div>
+                  <h3 className="text-2xl font-heading font-bold text-white uppercase">Personal Trainer</h3>
+                </div>
+                <p className="text-sm text-primary font-bold uppercase tracking-wide mb-4">Acompanhamento Presencial</p>
+                <p className="text-gray-300 mb-8 leading-relaxed">
+                  Indicado para quem quer treinar ao vivo com um personal, com correção imediata de execução, motivação constante e evolução acelerada.
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-white font-bold mb-3 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full" /> Para quem é ideal:
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        Quem quer aprender a executar os exercícios corretamente
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        Quem precisa de motivação e disciplina no dia a dia
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary shrink-0 mt-0.5" />
+                        Quem busca evolução máxima com acompanhamento em tempo real
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4 className="text-white font-bold mb-3 flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 bg-primary rounded-full" /> Benefícios:
+                    </h4>
+                    <ul className="space-y-2 text-sm text-gray-400">
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-white shrink-0 mt-0.5" />
+                        Avaliação física e planejamento totalmente personalizado
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-white shrink-0 mt-0.5" />
+                        Correção de execução e prevenção de lesões em tempo real
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-white shrink-0 mt-0.5" />
+                        Orientação sobre hábitos, postura e rotina de vida
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
 
@@ -203,9 +274,16 @@ export function Services() {
               </div>
             </div>
 
-            <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center">
+            <div className="bg-primary/10 border border-primary/20 rounded-lg p-4 text-center mb-4">
               <p className="text-primary font-medium text-sm md:text-base">
                 💡 Quanto maior o período, maior o compromisso com a evolução e melhores os resultados.
+              </p>
+            </div>
+
+            <div className="bg-white/5 border border-white/10 rounded-lg p-4 flex items-start gap-3">
+              <Users className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+              <p className="text-gray-400 text-sm leading-relaxed">
+                <span className="text-white font-bold">Personal Trainer:</span> Os planos são mensais e o que varia é a frequência de treinos presenciais na semana — de 1x até 5x. Você escolhe a frequência que se encaixa na sua rotina.
               </p>
             </div>
           </div>

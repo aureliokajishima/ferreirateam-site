@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, Star, Zap } from "lucide-react";
+import { Check, Star, Zap, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
 import { CHECKOUT_LINKS } from "@/lib/constants";
 
@@ -12,6 +10,7 @@ type Plan = {
   priceMonthly: string;
   basePrice?: number; // For Pix calculation (used in Treino plans)
   pixText?: string; // Custom Pix text for Consultoria plans
+  monthlyNote?: string; // Info line for Personal plans
   installmentsText?: string;
   bestValue?: boolean;
   premium?: boolean;
@@ -90,10 +89,55 @@ const TREINO_PLANS: Plan[] = [
   }
 ];
 
-export function Pricing() {
-  const [isConsultoria, setIsConsultoria] = useState(true);
+const PERSONAL_PLANS: Plan[] = [
+  {
+    duration: "5x/Semana",
+    priceMonthly: "R$ 1.200,00/mês",
+    monthlyNote: "Plano mensal · pagamento único",
+    link: CHECKOUT_LINKS.personal_5x,
+    premium: true,
+    features: ["Avaliação Física Completa", "Treino 100% Personalizado", "Correção de Execução", "Motivação e Disciplina", "Ajustes Constantes", "Orientação de Saúde e Postura"]
+  },
+  {
+    duration: "4x/Semana",
+    priceMonthly: "R$ 1.047,00/mês",
+    monthlyNote: "Plano mensal · pagamento único",
+    link: CHECKOUT_LINKS.personal_4x,
+    features: ["Avaliação Física Completa", "Treino 100% Personalizado", "Correção de Execução", "Motivação e Disciplina", "Ajustes Constantes", "Orientação de Saúde e Postura"]
+  },
+  {
+    duration: "3x/Semana",
+    priceMonthly: "R$ 847,00/mês",
+    monthlyNote: "Plano mensal · pagamento único",
+    bestValue: true,
+    link: CHECKOUT_LINKS.personal_3x,
+    features: ["Avaliação Física Completa", "Treino 100% Personalizado", "Correção de Execução", "Motivação e Disciplina", "Ajustes Constantes", "Orientação de Saúde e Postura"]
+  },
+  {
+    duration: "2x/Semana",
+    priceMonthly: "R$ 647,00/mês",
+    monthlyNote: "Plano mensal · pagamento único",
+    link: CHECKOUT_LINKS.personal_2x,
+    features: ["Avaliação Física Completa", "Treino 100% Personalizado", "Correção de Execução", "Motivação e Disciplina", "Ajustes Constantes", "Orientação de Saúde e Postura"]
+  },
+  {
+    duration: "1x/Semana",
+    priceMonthly: "R$ 400,00/mês",
+    monthlyNote: "Plano mensal · pagamento único",
+    link: CHECKOUT_LINKS.personal_1x,
+    features: ["Avaliação Física Completa", "Treino 100% Personalizado", "Correção de Execução", "Motivação e Disciplina", "Ajustes Constantes", "Orientação de Saúde e Postura"]
+  }
+];
 
-  const plans = isConsultoria ? CONSULTORIA_PLANS : TREINO_PLANS;
+type Service = 'consultoria' | 'treino' | 'personal';
+
+export function Pricing() {
+  const [activeService, setActiveService] = useState<Service>('consultoria');
+
+  const plans =
+    activeService === 'consultoria' ? CONSULTORIA_PLANS :
+    activeService === 'treino' ? TREINO_PLANS :
+    PERSONAL_PLANS;
 
   const calculatePixPrice = (basePrice: number) => {
     const discounted = basePrice * 0.95; // 5% off
@@ -108,30 +152,46 @@ export function Pricing() {
             ESCOLHA SEU PLANO
           </h2>
           
-          <div className="flex items-center justify-center gap-4 bg-white/5 p-2 rounded-full w-fit mx-auto border border-white/10">
+          <div className="flex items-center justify-center gap-1 bg-white/5 p-2 rounded-full w-full max-w-md sm:w-fit mx-auto border border-white/10">
             <button
-              onClick={() => setIsConsultoria(false)}
+              onClick={() => setActiveService('treino')}
               className={cn(
-                "px-6 py-2 rounded-full text-sm font-bold uppercase transition-all",
-                !isConsultoria ? "bg-white text-black" : "text-gray-400 hover:text-white"
+                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all text-center",
+                activeService === 'treino' ? "bg-white text-black" : "text-gray-400 hover:text-white"
               )}
             >
-              Apenas Treino
+              Treino
             </button>
             <button
-              onClick={() => setIsConsultoria(true)}
+              onClick={() => setActiveService('consultoria')}
               className={cn(
-                "px-6 py-2 rounded-full text-sm font-bold uppercase transition-all flex items-center gap-2",
-                isConsultoria ? "bg-primary text-white shadow-lg shadow-primary/25" : "text-gray-400 hover:text-white"
+                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1 sm:gap-2",
+                activeService === 'consultoria' ? "bg-primary text-white shadow-lg shadow-primary/25" : "text-gray-400 hover:text-white"
               )}
             >
-              Consultoria Completa
-              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[10px]">VIP</span>
+              Consultoria
+              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] hidden sm:inline">VIP</span>
+            </button>
+            <button
+              onClick={() => setActiveService('personal')}
+              className={cn(
+                "flex-1 sm:flex-none px-3 sm:px-5 py-2 rounded-full text-[11px] sm:text-sm font-bold uppercase transition-all flex items-center justify-center gap-1 sm:gap-2",
+                activeService === 'personal' ? "bg-primary text-white shadow-lg shadow-primary/25" : "text-gray-400 hover:text-white"
+              )}
+            >
+              <Users className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              Personal
+              <span className="bg-white/20 px-1.5 py-0.5 rounded text-[9px] sm:text-[10px] hidden sm:inline">Presencial</span>
             </button>
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className={cn(
+          "grid gap-6",
+          activeService === 'personal'
+            ? "md:grid-cols-3 lg:grid-cols-5"
+            : "md:grid-cols-2 lg:grid-cols-4"
+        )}>
           {plans.map((plan, index) => (
             <motion.div
               key={plan.duration}
@@ -159,17 +219,24 @@ export function Pricing() {
 
               <div className="mb-6">
                 <h3 className="text-xl font-heading font-bold text-white mb-2">{plan.duration}</h3>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
+                <div className={cn("font-bold text-white mb-1", activeService === 'personal' ? "text-xl" : "text-2xl md:text-3xl")}>
                   {plan.priceMonthly}
                 </div>
                 {plan.installmentsText && (
                   <p className="text-sm text-gray-400">{plan.installmentsText}</p>
                 )}
                 {/* Pix Discount Line */}
-                <div className="mt-2 text-sm font-semibold text-green-400 flex items-center gap-1.5">
-                  <Zap className="w-3 h-3 fill-current" />
-                  {plan.pixText || (plan.basePrice ? calculatePixPrice(plan.basePrice) : "")}
-                </div>
+                {(plan.pixText || plan.basePrice) && (
+                  <div className="mt-2 text-sm font-semibold text-green-400 flex items-center gap-1.5">
+                    <Zap className="w-3 h-3 fill-current" />
+                    {plan.pixText || (plan.basePrice ? calculatePixPrice(plan.basePrice) : "")}
+                  </div>
+                )}
+                {plan.monthlyNote && (
+                  <div className="mt-2 text-sm text-gray-500 flex items-center gap-1.5">
+                    {plan.monthlyNote}
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-3 mb-8 flex-1">
